@@ -1,0 +1,106 @@
+<?php
+$bdd = new PDO('mysql:host=localhost;dbname=test', 'root', '');
+?>
+
+// bdd est un objet et non une variable ici il sert à la connexion de la BDD
+
+<?php
+try
+{
+$bdd = new PDO('mysql:host=localhost;dbname=test', 'root', '');
+}c
+atch (Exception $e)
+{
+die('Erreur : ' . $e->getMessage());
+}?
+>
+
+/* On gère les éventuelles erreur qd à un mauvais renseignement des différents champs
+
+Maintenant il faut créer une table puis l'importer pour pouvoir interagir avec la bdd */
+
+
+$reponse = $bdd->query('Tapez votre requête SQL ici');
+
+// On demande ainsi à effectuer une requête sur la base de données.
+
+Exemple de reqûete :
+<?php
+$reponse = $bdd->query('SELECT * FROM jeux_video');
+?>
+
+Le problème, c'est que $reponse contient quelque chose d'inexploitable. MySQL nous renvoie beaucoup d'informations qu'il
+faut organiser.
+
+Pour récupérer une entrée, on prend la réponse de MySQL et on y exécute fetch(), ce qui nous renvoie la première ligne.
+
+<?php
+$donnees = $reponse->fetch();
+?>
+
+$donnees est un array qui contient champ par champ les valeurs de la première entrée. Par exemple, si vous vous intéressez au
+champ console, vous utiliserez l'array $donnees['console'].
+Il faut faire une boucle pour parcourir les entrées une à une. Chaque fois que vous appelez $reponse->fetch(), vous
+passez à l'entrée suivante. La boucle est donc répétée autant de fois qu'il y a d'entrées dans votre table.
+
+
+
+Exemple complet :
+
+
+<?php
+try
+{
+// On se connecte à MySQL
+$bdd = new PDO('mysql:host=localhost;dbname=test', 'root', '');
+}c
+atch(Exception $e)
+{
+// En cas d'erreur, on affiche un message et on arrête tout
+die('Erreur : '.$e->getMessage());
+}
+// Si tout va bien, on peut continuer
+// On récupère tout le contenu de la table jeux_video
+$reponse = $bdd->query('SELECT * FROM jeux_video');
+// On affiche chaque entrée une à une
+while ($donnees = $reponse->fetch())
+{?
+>
+<p>
+<strong>Jeu</strong> : <?php echo $donnees['nom']; ?><br />
+Le possesseur de ce jeu est : <?php echo $donnees['possesseur'];
+?>, et il le vend à <?php echo $donnees['prix']; ?> euros !<br />
+Ce jeu fonctionne sur <?php echo $donnees['console']; ?> et on
+peut y jouer à <?php echo $donnees['nbre_joueurs_max']; ?> au
+maximum<br />
+<?php echo $donnees['possesseur']; ?> a laissé ces commentaires
+sur <?php echo $donnees['nom']; ?> : <em><?php echo
+$donnees['commentaires']; ?></em>
+</p>
+<?php
+}
+$reponse->closeCursor(); // Termine le traitement de la requête
+?>
+
+
+Prenez l'habitude de rajouter le code or die(print_r($bdd->errorInfo())) sur la même ligne que votre requête
+pour afficher des détails sur l'erreur.
+
+Pour ajouter et modifier des données dans la base il vous faut connaître : INSERT, UPDATE et DELETE.
+
+Exemple d'utilisation :
+INSERT INTO jeux_video VALUES('', 'Battlefield 1942',
+'Patrick', 'PC', 45, 50,
+'2nde guerre mondiale')
+
+UPDATE jeux_video SET prix = 10, nbre_joueurs_max = 32 WHERE ID = 51
+
+DELETE FROM jeux_video WHERE nom='Battlefield 1942'
+
+INSERT INTO : ajout d'une entrée ;
+UPDATE : modification d'une ou plusieurs entrées ;
+DELETE : suppression d'une ou plusieurs entrées.
+
+Lorsqu'on utilise UPDATE ou DELETE, il faut penser à filtrer avec un WHERE sinon toute la table sera affectée par
+l'opération !
+
