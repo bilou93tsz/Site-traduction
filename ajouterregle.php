@@ -15,6 +15,7 @@
 
 
 <form method='post' action='ajouterregle.php'>
+<p><label>Le numero de la regle</label><input type = "text" name = "num" /></p>
 
 <p><label>Regle en Français</label><input type = "text" name = "regle1" /></p>
 
@@ -24,11 +25,26 @@
 
 </form>
 
-// A COMPLETER QUAND LA BASE DE DONNEES SERA TERMINEE
+// COMPLETER $cnx QUAND URL SERA DEFINI
 
 <?php
 
-if($_POST['regle1']!='' && $_POST['regle2']!=''){}
+if($_POST['num']!='' && $_POST['regle1']!='' && $_POST['regle2']!='')
+{
+	try{
+		$cnx = new PDO('mysql:host=xxx ; dbname=xxx' 'xxx' 'xxx');
+		echo 'Connexion etablie';
+	}
+	catch(PDOException $dbex){
+		die('Erreur de connexion:'.$dbex->getMessage());
+	}
+
+	$numero = (int)$_POST['num'];
+
+	$insert = "INSERT INTO Regle($numero , $_POST['regle1'] , $_POST['regle2'])";
+	$requete = $cnx->exec(insert);
+
+}
 
 ?>
 
@@ -39,4 +55,3 @@ if($_POST['regle1']!='' && $_POST['regle2']!=''){}
 </body>
 
 </html>
-
