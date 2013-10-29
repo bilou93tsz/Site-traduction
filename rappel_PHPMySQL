@@ -104,3 +104,5 @@ DELETE : suppression d'une ou plusieurs entrées.
 Lorsqu'on utilise UPDATE ou DELETE, il faut penser à filtrer avec un WHERE sinon toute la table sera affectée par
 l'opération !
 
+
+Aide perso pr la page inscription : http://www.ybet.be/internet14/php-13.php
