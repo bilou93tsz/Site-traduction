@@ -1,5 +1,4 @@
 
-
 <?php
 
 include('entete.php');
@@ -53,8 +52,9 @@ include('terminaisonAnglaise.php');
 
 	$verbeFr18 = $verbeFr.$groupe1['futur6']; */
 
+
 	
-	echo '<p>' + $POST['verbeFrancais'] + '</p>'  ;
+	echo "<p> $POST['verbeFrancais']  </p>"   ;   	/*tester l'affichage de la valeur entrée */
 
 	
 
