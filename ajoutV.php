@@ -1,4 +1,3 @@
-
 <?php
 
 include('entete.php');
@@ -108,15 +107,15 @@ include('terminaisonAnglaise.php');
 
 	}
 
-	elseif (isset($verbe3)){
+	elseif (isset($POST['verbeFrancais']) && $POST['groupe3']==true ){
 
-	echo 
+	
 
 	
 
 	}
 
-	elseif (isset($POST['verbeAnglais']) && isset($POST['groupeReg'])){
+	elseif (isset($POST['verbeAnglais']) && $POST['groupeReg']== true ){
 
 		$verbeEn = $POST['verbeAnglais'];
 
@@ -149,7 +148,7 @@ include('terminaisonAnglaise.php');
 
 	}
 
-	elseif (isset($verbeIrreg)){
+	elseif (isset($POST['verbeAnglais']) && $POST['groupeIrr'] ==true){
 
 	
 
