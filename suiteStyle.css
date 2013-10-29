@@ -1,0 +1,98 @@
+
+
+#ajoutVerbe {
+
+  padding: 3px;
+
+  border: 10px solid #CCC;
+
+  -moz-border-radius: 10px;
+
+  -webkit-border-radius: 10px;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  height:250px;
+
+  width:800px;
+
+  margin-left: 250px;
+
+  margin-top: 50px;
+
+}
+
+.groupe {
+
+
+
+margin:10px;
+
+}
+
+.boutton {
+
+margin-top: 15px;
+
+
+
+}
+#bout{
+margin-right: 10px;
+}
+
+/* CSS de la page ajoutV.php */
+
+table {
+
+
+
+  borderColor=#808080; 
+
+  cellSpacing=2;
+
+  cellPadding=2; 
+
+  align=center; 
+
+  border=1;
+
+
+
+}
+
+/* CSS de la page ajoutGrammaire.php */
+
+#ajoutGram{
+
+  
+
+  padding: 10px;
+
+  border: 10px solid #CCC;
+
+  -moz-border-radius: 10px;
+
+  -webkit-border-radius: 10px;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  width:800px;
+
+  margin-left: 250px;
+
+  margin-top: 50px;
+
+  height:200px;
+
+}
+
+.regle{
+
+margin:10px;
+
+}
