@@ -9,13 +9,13 @@ include('terminaisonAnglaise.php');
 
 	
 
-	if(isset($POST['verbeFrancais']) && $POST['groupe1'] == true){
+	if(isset($_POST['verbeFrancais']) && $_POST['groupe1'] == true){
 
-		$verbeFr = substr($POST['verbeFrancais'],0,-2);
+		$verbeFr = substr($_POST['verbeFrancais'],0,-2);
 
 		 
 
-	/*$verbeFr1 = $verbeFr.$groupe1['present1'];
+	$verbeFr1 = $verbeFr.$groupe1['present1'];
 
 	$verbeFr2 = $verbeFr.$groupe1['present2'];
 
@@ -49,23 +49,23 @@ include('terminaisonAnglaise.php');
 
 	$verbeFr17 = $verbeFr.$groupe1['futur5'];
 
-	$verbeFr18 = $verbeFr.$groupe1['futur6']; */
+	$verbeFr18 = $verbeFr.$groupe1['futur6']; 
 
 
 	
-	echo "<p> $POST['verbeFrancais']  </p>"   ;   	/*tester l'affichage de la valeur entrée */
+	echo "<p> $_POST['verbeFrancais']  </p>"   ;   	/*tester l'affichage de la valeur entrée */
 
 	
 
 	}
 
-	elseif (isset($POST['verbeFrancais']) && $POST['groupe2']== true){
+	elseif (isset($_POST['verbeFrancais']) && $_POST['groupe2']== true){
 
-		$verbe2Fr = substr($POST['verbeFrancais'],0,-2);
+		$verbe2Fr = substr($_POST['verbeFrancais'],0,-2);
 
 	 
 
-	/*$verbe2Fr1 = $verbe2Fr.$groupe2['present1'];
+	$verbe2Fr1 = $verbe2Fr.$groupe2['present1'];
 
 	$verbe2Fr2 = $verbe2Fr.$groupe2['present2'];
 
@@ -103,11 +103,11 @@ include('terminaisonAnglaise.php');
 
 
 
-	*/
+	
 
 	}
 
-	elseif (isset($POST['verbeFrancais']) && $POST['groupe3']==true ){
+	elseif (isset($_POST['verbeFrancais']) && $_POST['groupe3']==true ){
 
 	
 
@@ -115,13 +115,13 @@ include('terminaisonAnglaise.php');
 
 	}
 
-	elseif (isset($POST['verbeAnglais']) && $POST['groupeReg']== true ){
+	elseif (isset($_POST['verbeAnglais']) && $_POST['groupeReg']== true ){
 
-		$verbeEn = $POST['verbeAnglais'];
+		$verbeEn = $_POST['verbeAnglais'];
 
 
 
-	/*$verbeEn1 = $verbeEn.$groupeReg['present1'];
+	$verbeEn1 = $verbeEn.$groupeReg['present1'];
 
 	$verbeEn2 = $verbeEn.$groupeReg['present2'];
 
@@ -144,11 +144,11 @@ include('terminaisonAnglaise.php');
 	$verbeEn11 = $verbeEn.$groupeReg['imparfait5'];
 
 	$verbeEn12 = $verbeEn.$groupeReg['imparfait6'];
-	*/
+	
 
 	}
 
-	elseif (isset($POST['verbeAnglais']) && $POST['groupeIrr'] ==true){
+	elseif (isset($_POST['verbeAnglais']) && $_POST['groupeIrr'] ==true){
 
 	
 
