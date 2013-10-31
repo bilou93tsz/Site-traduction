@@ -1,0 +1,6 @@
+
+Lancer WAMP, une fois l'icone devenu vert cliquer dessus puis sur www directory --> créer un dossier et y mettre tous 
+les fichiers. (pour moi le chemin c'est Disque local (C:)/wamp/www ). Une fois le dossier créé, cliquer sur 
+l'icone vert puis sur Localhost,une page web doit s'ouvrir dans votre navigateur où y aura différents paragraphes: 
+Configuration Serveur, Outils,etc.. et dans Vos projets il y aura le nom du dossier créé cliquer dessus 
+et choisir le fichier à exécuter .   
