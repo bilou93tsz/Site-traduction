@@ -1,17 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+        <head>
+
+               
+
+		<meta http-equiv="content-type" content="text/html" charset="utf-8" /> 
+
+                <link href="style.css" type="text/css" rel="stylesheet"/>
+
+		<link rel="shortcut icon" href="images/wiki-logo.ico">
+
+                <script type="text/javascript" src='jquery-1.9.1.js'></script>
+
+		<script type="text/javascript" src='script.js'></script>
+
+		<title> Traducteur </title>
+
+	</head>
+
+ 
+
+	<body>
+
+
+
+        	<div id='banniere'>
+
+                	<a href='accueil.php'><img id='img' src='images/img1.jpg'/></a>
+
+        	</div>
+
 <?php
 
-include('entete.php');
+
 
 include('terminaisonFrancaise.php');
+
 include('terminaisonAnglaise.php');
 
 
 
 	
 
-	if(isset($_POST['verbeFrancais']) && $_POST['groupe1'] == true){
+	if(!empty($_POST['groupe1'])) {    /* verbe français du 1er groupe */
 
-		$verbeFr = substr($_POST['verbeFrancais'],0,-2);
+		
+	$verbeFr = substr($_POST['verbeFrancais'],0,-2);  /* substr() va retirer les 2 dernières lettres pour obtenir le radical du verbe*/
 
 		 
 
@@ -51,17 +87,129 @@ include('terminaisonAnglaise.php');
 
 	$verbeFr18 = $verbeFr.$groupe1['futur6']; 
 
-
 	
-	echo "<p> $_POST['verbeFrancais']  </p>"   ;   	/*tester l'affichage de la valeur entrée */
+
+	echo  "   <form method='post' action='ajoutV4.php'> 
+
+
+
+					<table id='tab'> 
+
+						<tr>  
+
+							 <th></th>
+
+                                                         <th> Conjugaison du verbe Français </th>
+
+						</tr>
+
+						<tr>
+
+						  	 <th></th>
+
+                           			  	 <th>Présent</th>
+
+						    	 <th>Imparfait</th>
+
+						  	 <th>Futur</th>
+
+						 </tr>
+
+						 <tr>
+
+					         <td>Je</td>	  
+
+						 <td><input type='text' name='vbfranc1'   value='". $verbeFr1."'></td>
+
+						 <td><input type='text' name='vbfranc7'   value='". $verbeFr7."'></td>
+
+						 <td><input type='text' name='vbfranc13'   value='". $verbeFr13."'> </td>
+
+							  </tr>
+
+							   <tr>
+
+							  <td>Tu</td>
+
+							  <td><input type='text' name='vbfranc2'   value='". $verbeFr2."'> </td>
+
+							  <td><input type='text' name='vbfranc8'   value='". $verbeFr8 ."'> </td>
+
+							  <td><input type='text' name='vbfranc14'   value='". $verbeFr14 ."'> </td>
+
+							  </tr>
+
+							   <tr>
+
+							  <td>Il\Elle</td>
+
+							  <td><input type='text' name='vbfranc3'   value='". $verbeFr3 ."'> </td>
+
+							  <td><input type='text' name='vbfranc9'   value='". $verbeFr9."'></td>
+
+							  <td><input type='text' name='vbfranc15'   value='". $verbeFr15."'> </td>
+
+							  </tr>
+
+							   <tr>
+
+							  <td>Nous</td>
+
+							  <td><input type='text' name='vbfranc4'   value='". $verbeFr4 ."'> </td>	
+
+							  <td><input type='text' name='vbfranc10'   value='". $verbeFr10 ."'> 								  </td>
+
+							  <td><input type='text' name='vbfranc16'   value='". $verbeFr16 ."'> </td>
+
+							  </tr>
+
+							   <tr>
+
+							  <td>Vous</td>
+
+							  <td><input type='text' name='vbfranc5'   value='". $verbeFr5  ."'> </td>
+
+							  <td><input type='text' name='vbfranc11'   value='". $verbeFr11  ."'> 								  </td>
+
+							  <td><input type='text' name='vbfranc17'   value='". $verbeFr17 ."'> </td>
+
+							  </tr>
+
+							   <tr>
+
+							  <td>Ils\Elles</td>
+
+							  <td><input type='text' name='vbfranc6'   value='". $verbeFr6 ."'> </td>
+
+							  <td><input type='text' name='vbfranc12'   value='". $verbeFr12 ."'> 								   </td>
+
+							  <td><input type='text' name='vbfranc18'   value='". $verbeFr18 ."'> </td>
+
+							  </tr>
+
+							   
+
+							  <input type='submit' class='boutton' id='bout' value='Valider' />
+
+							  <input type='submit' class='boutton' value='Annuler' />
+
+							  </table> </form> 	
+
+							
+
+							" ; 
+
+						 
 
 	
 
 	}
 
-	elseif (isset($_POST['verbeFrancais']) && $_POST['groupe2']== true){
 
-		$verbe2Fr = substr($_POST['verbeFrancais'],0,-2);
+	elseif (!empty($_POST['groupe2'])){
+
+		
+	$verbe2Fr = substr($_POST['verbeFrancais'],0,-2);
 
 	 
 
@@ -103,21 +251,243 @@ include('terminaisonAnglaise.php');
 
 
 
-	
+	echo  "   <form method='post' action='ajoutV4.php'> 
+
+
+
+					<table id='tab'> 
+
+						<tr>  
+
+							 <th></th>
+
+                                                         <th> Conjugaison du verbe Français </th>
+
+						</tr>
+
+						<tr>
+
+						  	 <th></th>
+
+                           			  	 <th>Présent</th>
+
+						    	 <th>Imparfait</th>
+
+						  	 <th>Futur</th>
+
+						 </tr>
+
+						 <tr>
+
+					         <td>Je</td>	  
+
+						 <td><input type='text' name='vbfranc1'   value='". $verbe2Fr1."'></td>
+
+						 <td><input type='text' name='vbfranc7'   value='". $verbe2Fr7."'></td>
+
+						 <td><input type='text' name='vbfranc13'   value='". $verbe2Fr13."'> </td>
+
+							  </tr>
+
+							   <tr>
+
+							  <td>Tu</td>
+
+							  <td><input type='text' name='vbfranc2'   value='". $verbe2Fr2."'> </td>
+
+							  <td><input type='text' name='vbfranc8'   value='". $verbe2Fr8 ."'> </td>
+
+							  <td><input type='text' name='vbfranc14'   value='". $verbe2Fr14 ."'> </td>
+
+							  </tr>
+
+							   <tr>
+
+							  <td>Il\Elle</td>
+
+							  <td><input type='text' name='vbfranc3'   value='". $verbe2Fr3 ."'> </td>
+
+							  <td><input type='text' name='vbfranc9'   value='". $verbe2Fr9."'></td>
+
+							  <td><input type='text' name='vbfranc15'   value='". $verbe2Fr15."'> </td>
+
+							  </tr>
+
+							   <tr>
+
+							  <td>Nous</td>
+
+							  <td><input type='text' name='vbfranc4'   value='". $verbe2Fr4 ."'> </td>	
+
+							  <td><input type='text' name='vbfranc10'   value='". $verbe2Fr10 ."'> 								  </td>
+
+							  <td><input type='text' name='vbfranc16'   value='". $verbe2Fr16 ."'> </td>
+
+							  </tr>
+
+							   <tr>
+
+							  <td>Vous</td>
+
+							  <td><input type='text' name='vbfranc5'   value='". $verbe2Fr5  ."'> </td>
+
+							  <td><input type='text' name='vbfranc11'   value='". $verbe2Fr11  ."'> 								  </td>
+
+							  <td><input type='text' name='vbfranc17'   value='". $verbe2Fr17 ."'> </td>
+
+							  </tr>
+
+							   <tr>
+
+							  <td>Ils\Elles</td>
+
+							  <td><input type='text' name='vbfranc6'   value='". $verbe2Fr6 ."'> </td>
+
+							  <td><input type='text' name='vbfranc12'   value='". $verbe2Fr12 ."'> 								   </td>
+
+							  <td><input type='text' name='vbfranc18'   value='". $verbe2Fr18 ."'> </td>
+
+							  </tr>
+
+							   
+
+							  <input type='submit' class='boutton' id='bout' value='Valider' />
+
+							  <input type='submit' class='boutton' value='Annuler' />
+
+							  </table> </form> 	
+
+							
+
+							" ; 
 
 	}
 
-	elseif (isset($_POST['verbeFrancais']) && $_POST['groupe3']==true ){
 
-	
+	elseif(!empty($_POST['groupe3'])) {
 
-	
 
-	}
 
-	elseif (isset($_POST['verbeAnglais']) && $_POST['groupeReg']== true ){
+echo  "   <form method='post' action='ajoutV4.php'> 
 
-		$verbeEn = $_POST['verbeAnglais'];
+
+
+					<table id='tab'> 
+
+						<tr>  
+
+							 <th></th>
+
+                                                         <th> Conjugaison du verbe Français </th>
+
+						</tr>
+
+						<tr>
+
+						  	 <th></th>
+
+                           			  	 <th>Présent</th>
+
+						    	 <th>Imparfait</th>
+
+						  	 <th>Futur</th>
+
+						 </tr>
+
+						 <tr>
+
+					         <td>Je</td>	  
+
+						 <td><input type='text' name='vbfranc1'  ></td>
+
+						 <td><input type='text' name='vbfranc7' ></td>
+
+						 <td><input type='text' name='vbfranc13' ></td>
+
+							  </tr>
+
+							   <tr>
+
+							  <td>Tu</td>
+
+							  <td><input type='text' name='vbfranc2' > </td>
+
+							  <td><input type='text' name='vbfranc8' > </td>
+
+							  <td><input type='text' name='vbfranc14'> </td>
+
+							  </tr>
+
+							   <tr>
+
+							  <td>Il\Elle</td>
+
+							  <td><input type='text' name='vbfranc3' > </td>
+
+							  <td><input type='text' name='vbfranc9' ></td>
+
+							  <td><input type='text' name='vbfranc15' > </td>
+
+							  </tr>
+
+							   <tr>
+
+							  <td>Nous</td>
+
+							  <td><input type='text' name='vbfranc4' > </td>	
+
+							  <td><input type='text' name='vbfranc10' ></td>
+
+							  <td><input type='text' name='vbfranc16' > </td>
+
+							  </tr>
+
+							   <tr>
+
+							  <td>Vous</td>
+
+							  <td><input type='text' name='vbfranc5' > </td>
+
+							  <td><input type='text' name='vbfranc11' ></td>
+
+							  <td><input type='text' name='vbfranc17' > </td>
+
+							  </tr>
+
+							   <tr>
+
+							  <td>Ils\Elles</td>
+
+							  <td><input type='text' name='vbfranc6' > </td>
+
+							  <td><input type='text' name='vbfranc12' ></td>
+
+							  <td><input type='text' name='vbfranc18' > </td>
+
+							  </tr>
+
+							   
+
+							  <input type='submit' class='boutton' id='bout' value='Valider' />
+
+							  <input type='submit' class='boutton' value='Annuler' />
+
+							  </table> </form> 	
+
+							
+
+							" ; 
+
+}
+
+
+
+
+
+	elseif (!empty($_POST['groupeReg'])){
+
+		
+	$verbeEn = $_POST['verbeAnglais'];
 
 
 
@@ -144,13 +514,238 @@ include('terminaisonAnglaise.php');
 	$verbeEn11 = $verbeEn.$groupeReg['imparfait5'];
 
 	$verbeEn12 = $verbeEn.$groupeReg['imparfait6'];
+
 	
+
+echo  "   <form method='post' action='ajoutV4.php'> 
+
+
+
+					<table id='tab'> 
+
+						<tr>  
+
+							 <th></th>
+
+                                                         <th> Conjugaison du verbe Anglais </th>
+
+						</tr>
+
+						<tr>
+
+						  	 <th></th>
+
+                           			  	 <th>Présent</th>
+
+						    	 <th>Imparfait</th>
+
+						  	 
+
+						 </tr>
+
+						 <tr>
+
+					         <td>I</td>	  
+
+						 <td><input type='text' name='vbEn1'   value='". $verbeEn1."'></td>
+
+						 <td><input type='text' name='vbEn7'   value='". $verbeEn7."'></td>
+
+						
+
+							  </tr>
+
+							   <tr>
+
+							  <td>You</td>
+
+							  <td><input type='text' name='vbEn2'   value='". $verbeEn2."'> </td>
+
+							  <td><input type='text' name='vbEn8'   value='". $verbeEn8 ."'> </td>
+
+							 
+
+							  </tr>
+
+							   <tr>
+
+							  <td>He\She\It</td>
+
+							  <td><input type='text' name='vbEn3'   value='". $verbeEn3 ."'> </td>
+
+							  <td><input type='text' name='vbEn9'   value='". $verbeEn9."'></td>
+
+							
+
+							  </tr>
+
+							   <tr>
+
+							  <td>We</td>
+
+							  <td><input type='text' name='vbEn4'   value='". $verbeEn4 ."'> </td>	
+
+							  <td><input type='text' name='vbEn10'   value='". $verbeEn10 ."'> 								  </td>
+
+							 
+
+							  </tr>
+
+							   <tr>
+
+							  <td>You</td>
+
+							  <td><input type='text' name='vbEn5'   value='". $verbeEn5  ."'> </td>
+
+							  <td><input type='text' name='vbEn11'   value='". $verbeEn11  ."'> 								  </td>
+
+							  
+
+							  </tr>
+
+							   <tr>
+
+							  <td>They</td>
+
+							  <td><input type='text' name='vbEn6'   value='". $verbeEn6 ."'> </td>
+
+							  <td><input type='text' name='vbEn12'   value='". $verbeEn12 ."'> 								   </td>
+
+							  
+
+							  </tr>
+
+							   
+
+							  <input type='submit' class='boutton' id='bout' value='Valider' />
+
+							  <input type='submit' class='boutton' value='Annuler' />
+
+							  </table> </form> 	
+
+							
+
+							" ; 
 
 	}
 
-	elseif (isset($_POST['verbeAnglais']) && $_POST['groupeIrr'] ==true){
+
+
+
+
+	elseif (!empty($_POST['groupeIrr'])){
 
 	
+
+		echo  "   <form method='post' action='ajoutV4.php'> 
+
+
+
+					<table id='tab'> 
+
+						<tr>  
+
+							 <th></th>
+
+                                                         <th> Conjugaison du verbe Anglais </th>
+
+						</tr>
+
+						<tr>
+
+						  	 <th></th>
+
+                           			  	 <th>Présent</th>
+
+						    	 <th>Imparfait</th>
+
+						  	 
+
+						 </tr>
+
+						 <tr>
+
+					         <td>I</td>	  
+
+						 <td><input type='text' name='vbEn1'   ></td>
+
+						 <td><input type='text' name='vbEn7'  ></td>
+
+						 
+
+							  </tr>
+
+							   <tr>
+
+							  <td>You</td>
+
+							  <td><input type='text' name='vbEn2'   > </td>
+
+							  <td><input type='text' name='vbEn8'   > </td>
+
+							  
+
+							  </tr>
+
+							   <tr>
+
+							  <td>He\She\It</td>
+
+							  <td><input type='text' name='vbEn3'   > </td>
+
+							  <td><input type='text' name='vbEn9'   ></td>
+
+							  
+
+							  </tr>
+
+							   <tr>
+
+							  <td>We</td>
+
+							  <td><input type='text' name='vbEn4'   > </td>	
+
+							  <td><input type='text' name='vbEn10'   ></td>
+
+							 
+
+							  </tr>
+
+							   <tr>
+
+							  <td>You</td>
+
+							  <td><input type='text' name='vbEn5'   > </td>
+
+							  <td><input type='text' name='vbEn11'   ></td>
+
+							 
+
+							  </tr>
+
+							   <tr>
+
+							  <td>They</td>
+
+							  <td><input type='text' name='vbEn6'   > </td>
+
+							  <td><input type='text' name='vbEn12'   ></td>
+
+							  
+
+							  </tr>
+
+							   
+
+							  <input type='submit' class='boutton' id='bout' value='Valider' />
+
+							  <input type='submit' class='boutton' value='Annuler' />
+
+							  </table> </form> 	
+
+							
+
+							" ; 
 
 	}
 
