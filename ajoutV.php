@@ -47,7 +47,8 @@ include('terminaisonAnglaise.php');
 	if(!empty($_POST['groupe1'])) {    /* verbe français du 1er groupe */
 
 		
-	$verbeFr = substr($_POST['verbeFrancais'],0,-2);  /* substr() va retirer les 2 dernières lettres pour obtenir le radical du verbe*/
+	$verbeFr = substr($_POST['verbeFrancais'],0,-2);  /* substr() va retirer les 2 dernières lettres pour obtenir 
+							  le radical du verbe*/
 
 		 
 
@@ -93,7 +94,7 @@ include('terminaisonAnglaise.php');
 
 
 
-					<table id='tab'> 
+					<table id='tab'>    
 
 						<tr>  
 
@@ -206,7 +207,7 @@ include('terminaisonAnglaise.php');
 	}
 
 
-	elseif (!empty($_POST['groupe2'])){
+	elseif (!empty($_POST['groupe2'])){  /*verbe francais du 2e groupe*/
 
 		
 	$verbe2Fr = substr($_POST['verbeFrancais'],0,-2);
@@ -364,7 +365,7 @@ include('terminaisonAnglaise.php');
 	}
 
 
-	elseif(!empty($_POST['groupe3'])) {
+	elseif(!empty($_POST['groupe3'])) { /* verbe francais du 3e groupe */
 
 
 
@@ -484,7 +485,7 @@ echo  "   <form method='post' action='ajoutV4.php'>
 
 
 
-	elseif (!empty($_POST['groupeReg'])){
+	elseif (!empty($_POST['groupeReg'])){ /* verbe anglais régulier */
 
 		
 	$verbeEn = $_POST['verbeAnglais'];
@@ -633,7 +634,7 @@ echo  "   <form method='post' action='ajoutV4.php'>
 
 
 
-	elseif (!empty($_POST['groupeIrr'])){
+	elseif (!empty($_POST['groupeIrr'])){ /* verbe anglais irrégulier */
 
 	
 
