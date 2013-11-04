@@ -16,7 +16,7 @@
                 	<a href='accueil.php'><img id='img' src='images/img1.jpg'/></a>
         	</div>
 
-	<div id='ajoutMot'>
+	<div id='ajout'>
 
 		<h1> Ajouter un mot : </h1>
 		<p>
@@ -32,15 +32,15 @@
 			<input type="text" name="motEnSg" />
 
 			<label> Mot anglais pluriel: </label>
-			<input type="text" name="motEnPl" />
+			<input type="text" name="motEnPl" /> <br>
 
-			<label >Nature : </label>
-			<input type="radio" name="nom_prop" /> <label >Nom propre</label>
-			<input type="radio" name="nom_com" /> <label >Nom commun</label>
-
+			
 			<label >Genre : </label>
 			<input type="radio" name="genre" /> <label >Féminin</label>
-			<input type="radio" name="genre" /> <label >Masculin</label>
+			<input type="radio" name="genre" /> <label >Masculin</label> <br>
+
+			<input type='submit' class='boutton' id='bout' value='Valider' />
+			<input type='submit' class='boutton' value='Annuler' />
 			</form>
 	       </p>
 	</div>
