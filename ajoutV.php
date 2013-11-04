@@ -44,11 +44,11 @@ include('terminaisonAnglaise.php');
 
 	
 
-	if(!empty($_POST['groupe1'])) {    /* verbe français du 1er groupe */
+	if($_POST['groupe']= '1er groupe') {
 
 		
-	$verbeFr = substr($_POST['verbeFrancais'],0,-2);  /* substr() va retirer les 2 dernières lettres pour obtenir 
-							  le radical du verbe*/
+
+	$verbeFr = substr($_POST['verbeFrancais'],0,-2);
 
 		 
 
@@ -94,7 +94,7 @@ include('terminaisonAnglaise.php');
 
 
 
-					<table id='tab'>    
+					<table id='tab'> 
 
 						<tr>  
 
@@ -142,7 +142,7 @@ include('terminaisonAnglaise.php');
 
 							   <tr>
 
-							  <td>Il\Elle</td>
+							  <td>Il\elle</td>
 
 							  <td><input type='text' name='vbfranc3'   value='". $verbeFr3 ."'> </td>
 
@@ -154,7 +154,7 @@ include('terminaisonAnglaise.php');
 
 							   <tr>
 
-							  <td>Nous</td>
+							  <td>nous</td>
 
 							  <td><input type='text' name='vbfranc4'   value='". $verbeFr4 ."'> </td>	
 
@@ -178,7 +178,7 @@ include('terminaisonAnglaise.php');
 
 							   <tr>
 
-							  <td>Ils\Elles</td>
+							  <td>Ils\elles</td>
 
 							  <td><input type='text' name='vbfranc6'   value='". $verbeFr6 ."'> </td>
 
@@ -188,7 +188,19 @@ include('terminaisonAnglaise.php');
 
 							  </tr>
 
-							   
+							  
+
+							  <label> Traduction : </label>
+
+							  <input type='text' name='traduction'/>
+
+ 
+
+							  <label> Infinitif : </label>
+
+							  <input type='text' name='infinitif' value='". $_POST['verbeFrancais'] ."'/>
+
+
 
 							  <input type='submit' class='boutton' id='bout' value='Valider' />
 
@@ -207,9 +219,11 @@ include('terminaisonAnglaise.php');
 	}
 
 
-	elseif (!empty($_POST['groupe2'])){  /*verbe francais du 2e groupe*/
+
+	elseif ($_POST['groupe']='2e groupe'){
 
 		
+
 	$verbe2Fr = substr($_POST['verbeFrancais'],0,-2);
 
 	 
@@ -304,7 +318,7 @@ include('terminaisonAnglaise.php');
 
 							   <tr>
 
-							  <td>Il\Elle</td>
+							  <td>Il\elle</td>
 
 							  <td><input type='text' name='vbfranc3'   value='". $verbe2Fr3 ."'> </td>
 
@@ -316,7 +330,7 @@ include('terminaisonAnglaise.php');
 
 							   <tr>
 
-							  <td>Nous</td>
+							  <td>nous</td>
 
 							  <td><input type='text' name='vbfranc4'   value='". $verbe2Fr4 ."'> </td>	
 
@@ -340,7 +354,7 @@ include('terminaisonAnglaise.php');
 
 							   <tr>
 
-							  <td>Ils\Elles</td>
+							  <td>Ils\elles</td>
 
 							  <td><input type='text' name='vbfranc6'   value='". $verbe2Fr6 ."'> </td>
 
@@ -350,7 +364,19 @@ include('terminaisonAnglaise.php');
 
 							  </tr>
 
-							   
+							  
+
+							  <label> Traduction : </label>
+
+							  <input type='text' name='traduction'/>  
+
+							  
+
+							  <label> Infinitif : </label>
+
+							  <input type='text' name='infinitif' value='". $_POST['verbeFrancais']."'/>
+
+							  
 
 							  <input type='submit' class='boutton' id='bout' value='Valider' />
 
@@ -365,7 +391,8 @@ include('terminaisonAnglaise.php');
 	}
 
 
-	elseif(!empty($_POST['groupe3'])) { /* verbe francais du 3e groupe */
+
+	elseif($_POST['groupe']='3e groupe') {
 
 
 
@@ -421,7 +448,7 @@ echo  "   <form method='post' action='ajoutV4.php'>
 
 							   <tr>
 
-							  <td>Il\Elle</td>
+							  <td>Il\elle</td>
 
 							  <td><input type='text' name='vbfranc3' > </td>
 
@@ -433,7 +460,7 @@ echo  "   <form method='post' action='ajoutV4.php'>
 
 							   <tr>
 
-							  <td>Nous</td>
+							  <td>nous</td>
 
 							  <td><input type='text' name='vbfranc4' > </td>	
 
@@ -457,7 +484,7 @@ echo  "   <form method='post' action='ajoutV4.php'>
 
 							   <tr>
 
-							  <td>Ils\Elles</td>
+							  <td>Ils\elles</td>
 
 							  <td><input type='text' name='vbfranc6' > </td>
 
@@ -467,7 +494,19 @@ echo  "   <form method='post' action='ajoutV4.php'>
 
 							  </tr>
 
-							   
+							  
+
+							  <label> Traduction : </label>
+
+							  <input type='text' name='traduction'/> 
+
+
+
+							  <label> Infinitif : </label>
+
+							  <input type='text' name='infinitif' value='". $_POST['verbeFrancais']."'/> 
+
+							  
 
 							  <input type='submit' class='boutton' id='bout' value='Valider' />
 
@@ -485,9 +524,10 @@ echo  "   <form method='post' action='ajoutV4.php'>
 
 
 
-	elseif (!empty($_POST['groupeReg'])){ /* verbe anglais régulier */
+	elseif ($_POST['groupe']='régulier'){
 
 		
+
 	$verbeEn = $_POST['verbeAnglais'];
 
 
@@ -616,7 +656,19 @@ echo  "   <form method='post' action='ajoutV4.php'>
 
 							  </tr>
 
-							   
+							  
+
+							  <label> Traduction : </label>
+
+							  <input type='text' name='traduction'/>  
+
+
+
+							  <label> Infinitif : </label>
+
+							  <input type='text' name='infinitif' value='". $_POST['verbeAnglais']."'/>
+
+
 
 							  <input type='submit' class='boutton' id='bout' value='Valider' />
 
@@ -634,7 +686,7 @@ echo  "   <form method='post' action='ajoutV4.php'>
 
 
 
-	elseif (!empty($_POST['groupeIrr'])){ /* verbe anglais irrégulier */
+	elseif ($_POST['groupe']= 'irrégulier'){
 
 	
 
@@ -736,7 +788,19 @@ echo  "   <form method='post' action='ajoutV4.php'>
 
 							  </tr>
 
-							   
+							  
+
+							  <label> Traduction : </label>
+
+							  <input type='text' name='traduction'/>  
+
+
+
+							  <label> Infinitif : </label>
+
+							  <input type='text' name='infinitif' value='". $_POST['verbeAnglais']."'/>
+
+
 
 							  <input type='submit' class='boutton' id='bout' value='Valider' />
 
