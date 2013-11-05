@@ -1,48 +1,67 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
-<head>
-
-<title>Ajouter une regle</title>
+<link href="ajouterregles.css" rel="stylesheet" type="text/css" />
 
 </head>
 
 <body>
 
-<h1>Ajouter une régle en Français et en Anglais</h1>
+<h2>Ajouter une regle en Francais et une en Anglais</h2>
 
 
 
-<form method='post' action='ajouterregle.php'>
-<p><label>Le numero de la regle</label><input type = "text" name = "num" /></p>
+<div id='banniere'>
 
-<p><label>Regle en Français</label><input type = "text" name = "regle1" /></p>
+                <img id='logo' src='Wiki_logo.png'/>
 
-<p><label>Regle en Anglais</label><input type = "text" name = "regle2" /></p>
+</div>
 
-<p><input type ="submit" value="envoyer">
+
+
+<form method='get' action='ajouterregles.php'>
+
+	<p><label>Le numero de la regle  </label><input type = "text" name = "num" /></p>
+
+	<p><label>Regle en Francais  </label><input type = "text" name = "regle1" /></p>
+
+	<p><label>Regle en Anglais  </label><input type = "text" name = "regle2" /></p>
+
+	<p><input type ="submit" value="envoyer">
 
 </form>
 
-// COMPLETER $cnx QUAND URL SERA DEFINI
-
 <?php
 
-if($_POST['num']!='' && $_POST['regle1']!='' && $_POST['regle2']!='')
+
+if( isset($_GET['num'])   &&    isset($_GET['regle1'])  && isset($_GET['regle2']))
+
 {
-	try{
-		$cnx = new PDO('mysql:host=xxx ; dbname=xxx' 'xxx' 'xxx');
-		echo 'Connexion etablie';
-	}
-	catch(PDOException $dbex){
-		die('Erreur de connexion:'.$dbex->getMessage());
-	}
 
-	$numero = (int)$_POST['num'];
 
-	$insert = "INSERT INTO Regle($numero , $_POST['regle1'] , $_POST['regle2'])";
-	$requete = $cnx->exec(insert);
+
+	$numero = $_GET['num'];
+
+	$rgl1 = $_GET['regle1'];
+
+	$rgl2 = $_GET['regle2'];
+
+	
+
+	try { $bdd = new PDO('mysql:host=localhost;dbname=grammaire', 'root', '');
+
+       		 echo 'Connexion etablie a la base de donnees <br /><br /><br /><br />'; }
+
+        catch(PDOException $dbex) {
+
+            die('Erreur de connexion :' .$dbex -> getMessage()) ; }
+
+
+
+
+
+	$bdd->exec("INSERT INTO Regle(numero,regleFR, regleEN) VALUES($numero, $rgl1 ,$rgl2)");
+
+
+
+
 
 }
 
@@ -55,3 +74,4 @@ if($_POST['num']!='' && $_POST['regle1']!='' && $_POST['regle2']!='')
 </body>
 
 </html>
+
