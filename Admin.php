@@ -11,7 +11,7 @@
 		if (isset($_POST[$nom])){
 			$var=$_POST[$nom];
 			if ($var==0){
-				$bdd->query('DELETE FROM utilisateur WHERE pseudo='.$nom);
+				$bdd->query('DELETE FROM Utilisateurs WHERE login='.$nom);
 			}
 			$bdd->query('UPDATE Utilisateurs SET droit='.$var.' WHERE login='.$nom);
 		} 	
