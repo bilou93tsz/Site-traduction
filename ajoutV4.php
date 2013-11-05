@@ -134,15 +134,15 @@ if(!empty($_POST['vbfranc1'])) {
 
 
 
-	$insert1 = "insert into verbe values('$_POST[infinitif]', '$_POST[traduction]', present, $vbFr1,$vbFr2, $vbFr3, $vbFr4, $vbFr5, $vbFr6 )";
+	$insert1 = "insert into mots.verbe values('$_POST[infinitif]', '$_POST[traduction]', present, $vbFr1,$vbFr2, $vbFr3, $vbFr4, $vbFr5, $vbFr6 )";
 
-	$insert2 = "insert into verbe values('$_POST[infinitif]', '$_POST[traduction]', imparfait, $vbFr7, $vbFr8, $vbFr9, $vbFr10, $vbFr11, $vbFr12 )";
+	$insert2 = "insert into mots.verbe values('$_POST[infinitif]', '$_POST[traduction]', imparfait, $vbFr7, $vbFr8, $vbFr9, $vbFr10, $vbFr11, $vbFr12 )";
 
-	$insert3 = "insert into verbe values('$_POST[infinitif]', '$_POST[traduction]', futur, $vbFr13, $vbFr14, $vbFr15, $vbFr16, $vbFr17, $vbFr18 )";        
+	$insert3 = "insert into mots.verbe values('$_POST[infinitif]', '$_POST[traduction]', futur, $vbFr13, $vbFr14, $vbFr15, $vbFr16, $vbFr17, $vbFr18 )";        
 
 	
 
-	//$requete = $bdd->exec($insert);
+	$requete = $bdd->exec($insert);
 
 	$requete1 = $bdd->exec($insert1);
 
@@ -216,9 +216,9 @@ elseif(!empty($_POST['vbEn1'])) {
 
 
 
-	$insert1 = "INSERT INTO verbe values('$_POST[infinitif]', '$_POST[traduction]', present, $vbEn1, $vbEn2, $vbEn3, $vbEn4, $vbEn5, $vbEn6 )";
+	$insert1 = "INSERT INTO mots.verbe values('$_POST[infinitif]', '$_POST[traduction]', present, $vbEn1, $vbEn2, $vbEn3, $vbEn4, $vbEn5, $vbEn6 )";
 
-	$insert2 = "INSERT INTO verbe values('$_POST[infinitif]', '$_POST[traduction]', imparfait, $vbEn7, $vbEn8, $vbEn9, '$vbEn10, $vbEn11, $vbEn12 )";
+	$insert2 = "INSERT INTO mots.verbe values('$_POST[infinitif]', '$_POST[traduction]', imparfait, $vbEn7, $vbEn8, $vbEn9, '$vbEn10, $vbEn11, $vbEn12 )";
 
 	
 
