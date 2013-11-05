@@ -1,0 +1,70 @@
+table {
+border: medium solid #000000;
+width: 50%;
+margin : 10px auto auto auto; 
+}
+td, th {
+border: thin solid #6495ed;
+width: 50%;
+}
+body{
+        text-align:center;
+	background-color : #B0C4DE ;
+	font-family : Arial ;
+}
+h2{
+	text-align:center;
+	font-family : Arial ;
+
+}
+form{
+	font-family : Arial ;
+}
+
+#act{
+        position:relative;
+}
+
+textarea{
+        font-size:35px;
+        position:absolute;
+        left:270px;
+        top:50px;
+}
+#warp{
+        border:3px solid #ddd;
+        border-radius:10px;
+        padding:2px;
+        background-color:#ccc;
+        color:#eee;
+        text-decoration:none;
+}
+#warp:hover{
+        border:2px solid #fff;
+        background-color:#fff;
+        color:red;
+        text-decoration:none;        
+}
+
+button{
+        cursor:pointer;
+        position:absolute;
+        left:640px;
+        top:125px;
+}
+
+#trad{
+        border: 1px solid #ccc;
+        width:350px;
+        height:150px;
+        font-size:40px;
+        position:absolute;
+        left:750px;
+        top:50px;
+        text-align:left;
+}
+#logo{
+        width:150px;
+        height:150px;
+}
+
