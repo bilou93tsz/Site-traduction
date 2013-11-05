@@ -41,7 +41,7 @@
 	  masculin_pl varchar(200) NOT NULL,
 	  traduction varchar(200) NOT NULL
 	  )";
-		$insert1 = "INSERT INTO adjectif values ('$_POST[adjFemSg]', '$_POST[adjFemPl]', '$_POST[adjMasculinSg]', '$_POST[adjMasculinPl]', '$_POST[traduction]')";
+		$insert1 = "INSERT INTO mots.adjectif values ('$_POST[adjFemSg]', '$_POST[adjFemPl]', '$_POST[adjMasculinSg]', '$_POST[adjMasculinPl]', '$_POST[traduction]')";
 		$requete = $bdd ->exec($insert);
 		$requete2 = $bdd ->exec($insert1);
 
