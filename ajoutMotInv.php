@@ -36,7 +36,7 @@
 	  'adverbe' varchar(200) NOT NULL,
 	  'traduction' varchar(200) NOT NULL)";
 
-		$insert1 = "INSERT INTO adverbe values ('$_POST[motFr]', '$_POST[motEn]')";
+		$insert1 = "INSERT INTO mots.adverbe values ('$_POST[motFr]', '$_POST[motEn]')";
 		$requete = $bdd ->exec($insert);
 		$requete2 = $bdd ->exec($insert1);
 
@@ -58,7 +58,7 @@
 	  'preposition' varchar(200) NOT NULL,
 	  'traduction' varchar(200) NOT NULL)";
 
-		$insert1 = "INSERT INTO preposition values ('$_POST[motFr]', '$_POST[motEn]')";
+		$insert1 = "INSERT INTO mots.preposition values ('$_POST[motFr]', '$_POST[motEn]')";
 		$requete = $bdd ->exec($insert);
 		$requete2 = $bdd ->exec($insert1);
 
@@ -80,7 +80,7 @@
 	  'conjonction' varchar(200) NOT NULL,
 	  'traduction' varchar(200) NOT NULL)";
 
-		$insert1 = "INSERT INTO conjonction values ('$_POST[motFr]', '$_POST[motEn]')";
+		$insert1 = "INSERT INTO mots.conjonction values ('$_POST[motFr]', '$_POST[motEn]')";
 		$requete = $bdd ->exec($insert);
 		$requete2 = $bdd ->exec($insert1);
 
