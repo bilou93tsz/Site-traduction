@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <meta content=" text/javascript ; charset=UTF-8"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <link href="page1.css" type="text/css" rel="stylesheet"/>
+        <script type="text/javascript" src='jquery-1.9.1.js'></script>
+
+	<script type="text/javascript" src='script1.js'></script>
+		
+	<title> Page d'inscription - Site Wiki Traducteur </title>
+
+    </head>
+<body>
+
+
+    
+  
+
+<form method="post" action="connect.php">
+    <p>
+
+
+	<fieldset>
+		<legend> Donnees obligatoires </legend>
+
+	<label for="pseudo">Votre pseudo :</label>
+        <input type="text" name="pseudo" id="pseudo" placeholder="Ex : Zozor" size="30" maxlength="20" required />
+
+	<br /><br />
+
+	<label for="pass">Votre mot de passe :</label>
+       <input type="password" name="pass" id="pass" required />
+
+	<br /><br />
+	<label for="pass2"> Verifier votre mot de passe : </label>
+	<input type="password" name="pass2" id="pass2" required />
+
+
+	<br /><br />
+	<label for="mail"> Votre e-mail : </label>
+	<input type="email" name="mail" id="mail" placeholder="Ex : zouzou@gmail.com" size="64" required />
+        </fieldset>
+
+
+
+	<fieldset>
+		<legend> Donnees facultatives </legend>
+       
+	<label for="sexe"> Quel est votre sexe ? </label>
+	<input type="radio" name="sexe" value="boy" /> Homme</label>
+
+        <input type="radio" name="sexe" value="girl" /> Femme </label>
+
+
+
+	<br /><br />
+	<label for="age"> Votre age : </label>
+	<input type="text" name="age" id="age" />
+
+
+	<br /><br />
+	<label for="page_perso"> Votre page perso ou site Web : </label>
+	<input type="url" name="page_perso" />
+
+	<br /><br />
+	<label for="numero_telephone"> Votre numero de telephone : </label>
+	<input type="tel" name="numero_telephone" />
+
+	</fieldset>
+
+	<br /><br />
+	<input type="submit" value="Valider Inscription" />
+	<input type="reset" value="Reset" />
+    </p>
+</form>
+
+
+
+
+
+</body>
+</html> 
