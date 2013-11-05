@@ -107,7 +107,7 @@ if($correct) {
 
 
 
-			$req = $bdd->prepare('INSERT INTO jeux_video(pseudo, password, age, mail, numero_telephone, page_perso, regdate) VALUES(:pseudo, :password, :age, :mail, :numero_telephone, :page_perso, :regdate)');
+			$req = $bdd->prepare('INSERT INTO utilisateurs(pseudo, password, age, mail, numero_telephone, page_perso, regdate) VALUES(:pseudo, :password, :age, :mail, :numero_telephone, :page_perso, :regdate)');
 			$req->execute(array(
     					'pseudo' => $pseudo,
     					'password' => $password,
