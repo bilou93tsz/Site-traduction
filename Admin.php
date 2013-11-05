@@ -13,7 +13,7 @@
 			if ($var==0){
 				$bdd->query('DELETE FROM utilisateur WHERE pseudo='.$nom);
 			}
-			$bdd->query('UPDATE utilisateur SET droit='.$var.' WHERE pseudo='.$nom);
+			$bdd->query('UPDATE Utilisateurs SET droit='.$var.' WHERE login='.$nom);
 		} 	
 	}
 	$reponse->closeCursor();
