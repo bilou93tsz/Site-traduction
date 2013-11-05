@@ -26,7 +26,7 @@
 	<div id='admin'>
 		<h2 style="texte-decoration:underline;">Gérer Utilisateurs :</h2>
 		<div id='user' style="border:1px solid;height:150px;width:500px;overflow:auto;">
-<?php		$reponse = $bdd->query('SELECT pseudo FROM utilisateur');
+<?php		$reponse = $bdd->query('SELECT login FROM Utilisateurs');
 ?>
 			<form action="Admin.php" method="post">
 <?php while ($nom = $reponse->fetch()){
