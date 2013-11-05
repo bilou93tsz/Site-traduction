@@ -6,7 +6,7 @@
         echo 'Connexion etablie a la base de donnees <br /><br /><br /><br />'; }
         catch(PDOException $dbex) {
             die('Erreur de connexion :' .$dbex -> getMessage()) ; }
-	$reponse = $bdd->query('SELECT pseudo FROM utilisateur');
+	$reponse = $bdd->query('SELECT login FROM Utilisateurs');
 	while ($nom = $reponse->fetch()){
 		if (isset($_POST[$nom])){
 			$var=$_POST[$nom];
