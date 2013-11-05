@@ -42,7 +42,7 @@ if (!empty($_POST['motFrPl']) and !empty($_POST['motFrSg']) and !empty($_POST['m
   'genre' varchar(200) NOT NULL,
   
 )";
-        $insert1 = "INSERT INTO mot values ('$_POST[motFrSg]', '$_POST[motFrPl]', '$_POST[motEnSg]', '$_POST[motEnPl]', '$_POST[genre]')";
+        $insert1 = "INSERT INTO mots.nom values ('$_POST[motFrSg]', '$_POST[motFrPl]', '$_POST[motEnSg]', '$_POST[motEnPl]', '$_POST[genre]')";
         $requete = $bdd ->exec($insert);
 	$requete2 = $bdd ->exec($insert1);
 
