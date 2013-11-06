@@ -44,7 +44,7 @@ include('terminaisonAnglaise.php');
 
 	
 
-	if($_POST['groupe']= '1er groupe') {
+	if(!empty($_POST['groupe1'])) {
 
 		
 
@@ -220,7 +220,7 @@ include('terminaisonAnglaise.php');
 
 
 
-	elseif ($_POST['groupe']='2e groupe'){
+	elseif (!empty($_POST['groupe2'])){
 
 		
 
@@ -392,7 +392,7 @@ include('terminaisonAnglaise.php');
 
 
 
-	elseif($_POST['groupe']='3e groupe') {
+	elseif(!empty($_POST['groupe3']) ) {
 
 
 
@@ -524,7 +524,7 @@ echo  "   <form method='post' action='ajoutV4.php'>
 
 
 
-	elseif ($_POST['groupe']='régulier'){
+	elseif (!empty($_POST['groupe4'])){
 
 		
 
@@ -686,7 +686,7 @@ echo  "   <form method='post' action='ajoutV4.php'>
 
 
 
-	elseif ($_POST['groupe']= 'irrégulier'){
+	elseif (!empty($_POST['groupe5'])){
 
 	
 
