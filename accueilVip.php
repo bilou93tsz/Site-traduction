@@ -34,7 +34,7 @@
 
 	    <td><p>Ici vous pouvez ajouter un mot en francais et en anglais pour parfaire les traductions donnees par le site</p></td></tr>
 
-	<tr><td><a href="page1.php"> <input type="button" value="Se deconnecter"> </a></td>
+	<tr><td><a href="accueil.php"> <input type="button" value="Se deconnecter"> </a></td>
 
 	    <td><p>Ici vous pouvez vous deconnecter</p></td></tr>
 
