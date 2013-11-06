@@ -24,6 +24,20 @@
 		 </div>
  </div>
  
+ <form method="post" action="cible.php">
+<p>
+<label for="pseudo"> Votre pseudo :</label>
+<input type="text" name="pseudo" required />
+
+<label for="mdp"> Votre mot de passe :</label>
+<input type="password" name="mdp" required />
+
+<input type="submit" value="Valider" />
+
+
+</p>
+</form>
+ 
 
 	 </body>
  </html>
