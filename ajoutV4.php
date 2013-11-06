@@ -46,7 +46,7 @@
 
 
 
-if(!empty($_POST['vbfranc1'])) {
+if(!empty($_POST['vbfranc1'])){
 
 
 
@@ -134,11 +134,11 @@ if(!empty($_POST['vbfranc1'])) {
 
 
 
-	$insert1 = "insert into mots.verbe values('$_POST[infinitif]', '$_POST[traduction]', present, $vbFr1,$vbFr2, $vbFr3, $vbFr4, $vbFr5, $vbFr6 )";
+	$insert1 = "INSERT INTO mots.verbe values('$_POST[infinitif]', '$_POST[traduction]', 'present', '$vbFr1','$vbFr2', '$vbFr3', '$vbFr4', '$vbFr5', '$vbFr6' )";
 
-	$insert2 = "insert into mots.verbe values('$_POST[infinitif]', '$_POST[traduction]', imparfait, $vbFr7, $vbFr8, $vbFr9, $vbFr10, $vbFr11, $vbFr12 )";
+	$insert2 = "INSERT INTO mots.verbe values('$_POST[infinitif]', '$_POST[traduction]', 'imparfait', '$vbFr7', '$vbFr8', '$vbFr9', '$vbFr10', '$vbFr11', '$vbFr12' )";
 
-	$insert3 = "insert into mots.verbe values('$_POST[infinitif]', '$_POST[traduction]', futur, $vbFr13, $vbFr14, $vbFr15, $vbFr16, $vbFr17, $vbFr18 )";        
+	$insert3 = "INSERT INTO mots.verbe values('$_POST[infinitif]', '$_POST[traduction]', 'futur', '$vbFr13', '$vbFr14', '$vbFr15', '$vbFr16', '$vbFr17', '$vbFr18' )";        
 
 	
 
@@ -152,7 +152,7 @@ if(!empty($_POST['vbfranc1'])) {
 
 	 echo "<br> L'ajout s'est effectué avec succès. Merci de votre participation.";
 
-	$bdd= null;
+	
 
 }
 
@@ -212,17 +212,45 @@ elseif(!empty($_POST['vbEn1'])) {
 
 
 
+	$insert = "CREATE TABLE IF NOT EXISTS verbe (
+
+
+
+  infinitif varchar(200) NOT NULL,
+
+  traduction varchar(200) NOT NULL,
+
+  temps varchar(200) NOT NULL,
+
+  1erePers varchar(200) NOT NULL,
+
+  2ePers varchar(200) NOT NULL,
+
+  3ePers varchar(200) NOT NULL,
+
+  4ePers varchar(200) NOT NULL,
+
+  5ePers varchar(200) NOT NULL,
+
+  6ePers varchar(200) NOT NULL
+
+)";
+
+
+
 	
 
+	$insert1 = "INSERT INTO mots.verbe values('$_POST[infinitif]', '$_POST[traduction]', 'present', '$vbEn1', '$vbEn2', '$vbEn3', '$vbEn4', '$vbEn5', '$vbEn6' )";
 
-
-	$insert1 = "INSERT INTO mots.verbe values('$_POST[infinitif]', '$_POST[traduction]', present, $vbEn1, $vbEn2, $vbEn3, $vbEn4, $vbEn5, $vbEn6 )";
-
-	$insert2 = "INSERT INTO mots.verbe values('$_POST[infinitif]', '$_POST[traduction]', imparfait, $vbEn7, $vbEn8, $vbEn9, '$vbEn10, $vbEn11, $vbEn12 )";
+	$insert2 = "INSERT INTO mots.verbe values('$_POST[infinitif]', '$_POST[traduction]', 'imparfait', '$vbEn7', '$vbEn8', '$vbEn9', '$vbEn10', '$vbEn11', '$vbEn12' )";
 
 	
 
 	echo "<br> L'ajout s'est effectué avec succès. Merci de votre participation.";
+
+
+
+	$requete = $bdd->exec($insert);	
 
 	$requete1 = $bdd->exec($insert1);
 
@@ -234,7 +262,8 @@ elseif(!empty($_POST['vbEn1'])) {
 
 
 
-$bdd= null;}
+}
+ else {echo "Veuillez réessayer";}
 
 ?>
 
