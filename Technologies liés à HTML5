@@ -1,0 +1,21 @@
+Voici une petite liste de ces nouvelles technologies introduites en parallèle de HTML5 (notez que certaines ne sont pas vraiment « nouvelles » mais elles reviennent sur le devant de la scène) :
+
+    Canvas : permet de dessiner au sein de la page web, à l'intérieur de la balise HTML <canvas>. On peut dessiner des formes (triangles, cercles…) mais aussi ajouter des images, les manipuler, appliquer des filtres graphiques… Au final, cela nous permet de réaliser aujourd'hui de véritables jeux et des applications graphiques directement dans des pages web ! Vous pouvez par exemple consulter le tutoriel du Site du Zéro sur Canvas (code web : 510274).
+
+    SVG : permet de créer des dessins vectoriels au sein des pages web. À la différence de Canvas, ces dessins peuvent être agrandis à l'infini (c'est le principe du vectoriel). Le logiciel Inkscape est connu pour permettre de dessiner des SVG. Il existe un tutoriel sur le Site du Zéro sur SVG (code web : 678000).
+
+    Drag & Drop : permet de faire « glisser-déposer » des objets dans la page web, de la même façon qu'on peut faire glisser-déposer des fichiers sur son bureau. Gmail l'utilise pour permettre d'ajouter facilement des pièces jointes à un e-mail.
+
+    File API : permet d'accéder aux fichiers stockés sur la machine du visiteur (avec son autorisation). On l'utilisera notamment en combinaison avec le Drag & Drop.
+
+    Géolocalisation : pour localiser le visiteur et lui proposer des services liés au lieu où il se trouve (ex. : les horaires des salles de cinéma proches). La localisation n'est pas toujours très précise, mais cela peut permettre de repérer un visiteur à quelques kilomètres près (avec son accord).
+
+    Web Storage : permet de stocker un grand nombre d'informations sur la machine du visiteur. C'est une alternative plus puissante aux traditionnels cookies. Les informations sont hiérarchisées, comme dans une base de données.
+
+    Appcache : permet de demander au navigateur de mettre en cache certains fichiers, qu'il ne cherchera alors plus à télécharger systématiquement. Très utile pour créer des applications web qui peuvent fonctionner même en mode « hors ligne » (déconnecté).
+
+    Web Sockets : permet des échanges plus rapides, en temps réel, entre le navigateur du visiteur et le serveur qui gère le site web (c'est une sorte d'AJAX amélioré). C'est un peu l'avenir des applications web, qui pourront devenir aussi réactives que les vrais programmes.
+
+    WebGL : permet d'introduire de la 3D dans les pages web, en utilisant le standard de la 3D OpenGL (figure suivante). Les scènes 3D sont directement gérées par la carte graphique.
+
+La plupart de ces technologies s'utilisent avec JavaScript. Il s'agit donc de nouvelles fonctionnalités que l'on peut utiliser en JavaScript.
