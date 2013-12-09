@@ -41,3 +41,16 @@ Zope 	gestion de contenu 	Zope 	Python 	Zope Corporation 	Logiciel libre
 (*) Certains frameworks comme Eclipse ou Apache constituent davantage des méta-frameworks, ou frameworks de frameworks, dans la mesure où ils permettent, selon les modules qui leur sont installés, de se réorienter vers différentes activités informatiques.
 
 (**) Microsoft .NET et les Java Platform peuvent être vus indifféremment comme des frameworks, ou comme des plate-formes logicielles selon que l'on considère leurs seules librairies de développement, ou leur environnement d'exécution.
+
+
+
+Un framework
+
+Symfony2 est donc un framework PHP. Bien sûr, il en existe d'autres ; pour ne citer que les plus connus : Zend Framework, CodeIgniter, CakePHP, etc. Le choix d'un framework est assez personnel, et doit être adapté au projet engagé. Sans vouloir prêcher pour ma paroisse, Symfony2 est l'un des plus flexibles et des plus puissants.
+
+
+
+
+
+
+
