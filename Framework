@@ -1,0 +1,43 @@
+Nom 	Usage 	Architecture cible 	Langage 	Auteur 	Licence
+ActionScript Foundry 	application web 	Adobe Flex 	ActionScript et Java 	ServeBox 	
+Apache Cocoon 	application web - servlet 	? 	Java, XML 	Apache Software 	Logiciel libre
+Spring 	application web 	Multiplate-forme 	Java 	Spring Source 	Logiciel libre
+Apache Struts 	application web 	Modèle-Vue-Contrôleur 	Java 	Apache Software 	Logiciel libre
+Catalyst 	logiciel applicatif 	Modèle-Vue-Contrôleur 	Perl 		Logiciel libre
+Cocoa 	logiciel applicatif 	Cocoa 	Objective C 	Apple 	
+CubicWeb 	Plate-forme de développement web sémantique 	Multiplate-forme 	Python 	Logilab 	LGPL
+Django 	application web 	Modèle-Vue-Contrôleur 	Python 	? 	Logiciel libre
+Dojo 	applet 	AJAX 	JavaScript 	Fondation Dojo
+Eclipse Modeling Framework (*) 	modélisation des données 	Multiplate-forme 	(ouvert) 	Fondation Eclipse 	Logiciel libre
+Eclipse RCP 	Rich Client Platform 	IDE Eclipse Platform, Multiplate-forme 	(ouvert) 	Fondation Eclipse 	Logiciel libre
+eZ Publish 	application web 	système de gestion de contenu 	PHP 	eZ Systems AS 	Logiciel libre
+JavaServer Faces 	application web 	Composant 	Java 		Logiciel libre
+FxEngine Framework 	traitement numérique du signal, plugin 	Filtres et tubes 	C++ 	SMProcess 	
+Grails 	application web 	Modèle-Vue-Contrôleur 	Groovy 	Graeme Rocher, Guillaume Laforge, Marc Palmer, Dierk Koenig et Steven Devijver 	
+Google Guice 	application web 	Multiplate-forme 	Java 	Bob Lee, Kevin B, Jesse Wilson, Christian Gruber 	Logiciel libre
+Hibernate 	persistance & mapping 	Java Persistance API 	Java 	JBoss 	Logiciel libre
+Java SE (**) 	framework générique pour Rich Client Platform 	Multiplate-forme 	Java
+Scala
+JScheme, implémentation de Scheme
+Clojure (dialecte de Lisp)
+JRuby
+Jython
+Rhino (moteur JavaScript) 	Sun Microsystems puis Oracle Corporation 	Logiciel libre
+Java EE (**) 	framework professionnel avec support du distribué
+Java ME (**) 	framework pour application mobile
+JavaFX (**) 	framework pour Rich Internet Application
+MARF 	traitement du signal et des langues 	pipeline 	Java 	Serguei Mokhov, Stephen Sinclair 	
+Microsoft Foundation Class 	logiciel applicatif 	Modèle-Vue-Contrôleur 	C++ 	Microsoft 	Propriétaire
+.Net (**) 	logiciel applicatif, application web, composant logiciel 	ASP.NET 	C#, Visual Basic .NET 	Microsoft 	Propriétaire
+Riena 	SOA (multi-tiers client/server) 	Eclipse RCP + Equinox 		Fondation Eclipse 	Logiciel libre
+Ruby on Rails 	application web 	Modèle-Vue-Contrôleur 	Ruby 	David Heinemeier Hansson et 	Logiciel libre
+SCOOTER 	application web 	Ruby on Rails - MVC 	Java 	Amazing force 	Logiciel libre
+Symfony 	application web 	Modèle-Vue-Contrôleur 	PHP 	Sensio Labs 	Logiciel libre
+TopLink 	persistance & mapping 	Java Persistance API 	Java 	Oracle Corporation
+WebOS/400 	Convert DSPF to HTML source file (CVTDSPF) 	Apache 2.0 on IBM i 	RPG/ILE 	CyberTekno Inc. 	Propriétaire
+Zend Framework 	application web 	Modèle-Vue-Contrôleur 	PHP 	Zend Technologies 	Logiciel libre
+Zope 	gestion de contenu 	Zope 	Python 	Zope Corporation 	Logiciel libre
+
+(*) Certains frameworks comme Eclipse ou Apache constituent davantage des méta-frameworks, ou frameworks de frameworks, dans la mesure où ils permettent, selon les modules qui leur sont installés, de se réorienter vers différentes activités informatiques.
+
+(**) Microsoft .NET et les Java Platform peuvent être vus indifféremment comme des frameworks, ou comme des plate-formes logicielles selon que l'on considère leurs seules librairies de développement, ou leur environnement d'exécution.
