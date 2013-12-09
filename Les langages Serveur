@@ -1,0 +1,11 @@
+Les langages « côté serveur » sont nombreux. Citons-en quelques-uns :
+
+    PHP : l'un des plus connus. Facile à utiliser et puissant, il est utilisé notamment par Facebook… et le Site du Zéro. J'ai d'ailleurs rédigé un tutoriel sur PHP sur le Site du Zéro.
+
+    JEE (Java) : très utilisé dans le monde professionnel, il s'agit d'une extension du langage Java qui permet de réaliser des sites web dynamiques, puissants et robustes. Au début, il est un peu plus complexe à prendre en main que PHP.
+
+    ASP .NET (C#) : assez semblable à JEE, c'est le langage de Microsoft. On l'utilise en combinaison avec d'autres technologies Microsoft (Windows Server…). Il utilise le puissant framework .NET, véritable couteau suisse des développeurs, qui offre de nombreuses fonctionnalités.
+
+    Django (Python) : une extension du langage Python qui permet de réaliser rapidement et facilement des sites web dynamiques. Il est connu pour générer des interfaces d'administration prêtes à l'emploi.
+
+    Ruby on Rails (Ruby) : une extension du langage Ruby, assez similaire à Django, qui permet de réaliser des sites web dynamiques facilement et avec une grande souplesse.
