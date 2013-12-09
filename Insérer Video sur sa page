@@ -1,0 +1,31 @@
+Pour convertir une vidéo dans ces différents formats, je vous conseille l'excellent logiciel gratuit Miro Video Converter que vous pouvez télécharger grâce au code web ci-dessous.
+
+Il vous suffit de glisser-déposer votre vidéo dans la fenêtre du programme et de sélectionner le format de sortie souhaité. Cela vous permettra de créer plusieurs versions de votre vidéo !
+
+
+WebM : un autre codec gratuit et libre de droits, plus récent. Proposé par Google, c'est le concurrent le plus sérieux de H.264 à l'heure actuelle.
+
+Rajoutons quelques attributs (la plupart sont les mêmes que pour la balise <audio>) :
+
+    poster : image à afficher à la place de la vidéo tant que celle-ci n'est pas lancée. Par défaut, le navigateur prend la première image de la vidéo mais, comme il s'agit souvent d'une image noire ou d'une image peu représentative de la vidéo, je vous conseille d'en créer une ! Vous pouvez tout simplement faire une capture d'écran d'un moment de la vidéo.
+
+    controls : pour ajouter les boutons « Lecture », « Pause » et la barre de défilement. Cela peut sembler indispensable, mais certains sites web préfèrent créer eux-mêmes leurs propres boutons et commander la lecture avec du JavaScript. En ce qui nous concerne, ce sera largement suffisant !
+
+    width : pour modifier la largeur de la vidéo.
+
+    height : pour modifier la hauteur de la vidéo.
+
+    loop : la vidéo sera jouée en boucle.
+
+    autoplay : la vidéo sera jouée dès le chargement de la page. Là encore, évitez d'en abuser, c'est en général irritant d'arriver sur un site qui lance quelque chose tout seul !
+
+    preload : indique si la vidéo peut être préchargée dès le chargement de la page ou non. Cet attribut peut prendre les valeurs :
+
+        auto (par défaut) : le navigateur décide s'il doit précharger toute la vidéo, uniquement les métadonnées ou rien du tout.
+
+        metadata : charge uniquement les métadonnées (durée, dimensions, etc.).
+
+        none : pas de préchargement. Utile si vous souhaitez éviter le gaspillage de bande passante sur votre site.
+        
+        
+<video src="mavideo.webm" controls poster="img_accueil_video.jpg" width="600">⁪</video⁪⁪>
