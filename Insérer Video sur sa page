@@ -29,3 +29,9 @@ Rajoutons quelques attributs (la plupart sont les mêmes que pour la balise <aud
         
         
 <video src="mavideo.webm" controls poster="img_accueil_video.jpg" width="600">⁪</video⁪⁪>
+
+
+http://www.iphone-forum.fr/viewtopic.php?id=4910 ==> pour transformer un dictaphone en audio que je puisse placer sur ma page web
+
+Exemple utilisation :
+<audio src="hype_home.mp3" controls></audio>
